@@ -43,7 +43,8 @@ import HubFramework
         registerGitHubSearchFeature()
         registerPrettyPicturesFeature()
         registerReallyLongListFeature()
-        
+        registerCitiesFeature()
+
         return true
     }
     
