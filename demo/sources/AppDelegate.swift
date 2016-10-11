@@ -121,9 +121,21 @@ import HubFramework
             viewControllerScrollHandler: nil
         )
     }
-    
+
+    private func registerCitiesFeature() {
+        hubManager.featureRegistry.registerFeature(
+            withIdentifier: "cities",
+            viewURIPredicate: HUBViewURIPredicate(viewURI: .citiesViewURI),
+            title: "Cities Title",
+            contentOperationFactories: [CitiesContentOperationFactory()],
+            contentReloadPolicy: nil,
+            customJSONSchemaIdentifier: nil,
+            actionHandler: nil,
+            viewControllerScrollHandler: nil)
+    }
+
     // MARK: - Opening view URIs
-    
+
     @discardableResult private func open(viewURI: URL, animated: Bool) -> Bool {
         guard let viewController = hubManager?.viewControllerFactory.createViewController(forViewURI: viewURI) else {
             return false
