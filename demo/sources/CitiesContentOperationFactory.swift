@@ -12,6 +12,6 @@ import HubFramework
 class CitiesContentOperationFactory: NSObject, HUBContentOperationFactory {
 
     func createContentOperations(forViewURI viewURI: URL) -> [HUBContentOperation] {
-        return [CitiesContentOperation()]
+        return [CitiesContentOperation(), CitiesImageContentOperation()]
     }
 }

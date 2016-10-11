@@ -15,6 +15,8 @@ class CitiesComponentFactory: NSObject, HUBComponentFactory {
         switch name {
         case "row":
             return CitiesRowComponent()
+        case "image":
+            return CitiesImageComponent()
         default:
             return nil
         }
