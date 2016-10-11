@@ -18,8 +18,26 @@ class CitiesContentOperation: NSObject, HUBContentOperation {
                  connectivityState: HUBConnectivityState,
                  viewModelBuilder: HUBViewModelBuilder,
                  previousError: Error?) {
+
         // here we create content
         viewModelBuilder.navigationBarTitle = featureInfo.title
+
+        let cities = ["Madrid", "Rome", "Berlin", "Amsterdam"]
+        let countries: [String: String] = [
+            "Madrid": "Spain",
+            "Rome": "Italy",
+            "Berlin": "Germany",
+            "Amsterdam": "Netherlandes"
+        ]
+
+        for city in cities {
+            let identifier = "city-\(city)"
+            let rowBuilder = viewModelBuilder.builderForBodyComponentModel(withIdentifier: identifier)
+            rowBuilder.componentNamespace = "cities"
+            rowBuilder.componentName = "row"
+            rowBuilder.title = city;
+            rowBuilder.subtitle = countries[city]
+        }
 
         delegate?.contentOperationDidFinish(self)
     }

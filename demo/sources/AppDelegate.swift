@@ -39,6 +39,8 @@ import HubFramework
         window.makeKeyAndVisible()
         
         registerDefaultComponentFactory()
+        registerCitiesComponentFactory()
+        
         registerAndOpenRootFeature()
         registerGitHubSearchFeature()
         registerPrettyPicturesFeature()
@@ -63,6 +65,10 @@ import HubFramework
     
     private func registerDefaultComponentFactory() {
         hubManager.componentRegistry.register(componentFactory: DefaultComponentFactory(), namespace: DefaultComponentFactory.namespace)
+    }
+
+    private func registerCitiesComponentFactory() {
+        hubManager.componentRegistry.register(componentFactory: CitiesComponentFactory(), namespace: "cities")
     }
     
     // MARK: - Feature registrations
