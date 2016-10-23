@@ -33,4 +33,6 @@ struct DefaultComponentNames {
     static var searchBar: String { return "searchBar" }
     /// An activity indicator component - maps to `ActivityIndicatorComponent`
     static var activityIndicator: String { return "activityIndicator" }
+
+    static var catRow: String { return "catRow" }
 }

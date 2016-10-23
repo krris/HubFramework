@@ -18,7 +18,16 @@ class CatsContentOperation: NSObject, HUBContentOperation {
                  connectivityState: HUBConnectivityState,
                  viewModelBuilder: HUBViewModelBuilder,
                  previousError: Error?) {
+        viewModelBuilder.navigationBarTitle = "Crazy cats are coming!"
 
+        let cats = ["Pusheen", "Garfield", "Koteczek"]
+
+
+        for cat in cats {
+            let builder = viewModelBuilder.builderForBodyComponentModel(withIdentifier: "cat-\(cat)")
+            builder.title = cat
+        }
+
+        delegate?.contentOperationDidFinish(self)
     }
-    
 }
