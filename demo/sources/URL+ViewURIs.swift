@@ -41,6 +41,10 @@ extension URL {
     static var reallyLongListViewURI: URL {
         return URL(viewURI: "reallylonglist")
     }
+    
+    static var catsViewURI: URL {
+        return URL(viewURI: "funnyCats")
+    }
 }
 
 private extension URL {
