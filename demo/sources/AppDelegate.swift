@@ -127,7 +127,7 @@ import HubFramework
 
     private func registerCatsFeature() {
         hubManager.featureRegistry.registerFeature(
-            withIdentifier: "catsFeature",
+            withIdentifier: "funnyCats",
             viewURIPredicate: HUBViewURIPredicate(viewURI: .catsViewURI),
             title: "Funny Cats",
             contentOperationFactories: [CatsContentOperationFactory()],

@@ -48,7 +48,7 @@ class RootContentOperation: NSObject, HUBContentOperation {
         reallyLongListRowBuilder.subtitle = "A feature that renders 10,000 rows"
         reallyLongListRowBuilder.targetBuilder.uri = .reallyLongListViewURI
 
-        let catsRowBuilder = viewModelBuilder.builderForBodyComponentModel(withIdentifier: "cats")
+        let catsRowBuilder = viewModelBuilder.builderForBodyComponentModel(withIdentifier: "funnyCats")
         catsRowBuilder.title = "Funny Cats"
         catsRowBuilder.subtitle = "The best cats in the world"
         catsRowBuilder.targetBuilder.uri = .catsViewURI

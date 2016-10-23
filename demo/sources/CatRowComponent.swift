@@ -11,11 +11,13 @@ import HubFramework
 
 class CatRowComponent: NSObject, HUBComponent {
 
-    var layoutTraits: Set<HUBComponentLayoutTrait> { return [.fullWidth, .stackable] }
+    var layoutTraits: Set<HUBComponentLayoutTrait> { return [.alwaysStackUpwards] }
     var view: UIView?
     private lazy var cell = UITableViewCell(style: .default, reuseIdentifier: nil)
     
     public func loadView() {
+        cell.backgroundColor = UIColor.red
+        
         view = cell
     }
 
@@ -47,6 +49,7 @@ class CatRowComponent: NSObject, HUBComponent {
      */
     public func configureView(with model: HUBComponentModel, containerViewSize: CGSize) {
         cell.textLabel?.text = model.title
+
     }
 
     /**

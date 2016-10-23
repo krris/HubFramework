@@ -44,6 +44,7 @@ class CatsContentOperation: NSObject, HUBContentOperation {
             let builder = viewModelBuilder.builderForBodyComponentModel(withIdentifier: "cat-\(cat)")
             builder.targetBuilder.addAction(withNamespace: ActionFactory.namespace, name: CatAction.name)
             builder.title = cat
+            builder.componentName = DefaultComponentNames.catRow
         }
 
         delegate?.contentOperationDidFinish(self)
