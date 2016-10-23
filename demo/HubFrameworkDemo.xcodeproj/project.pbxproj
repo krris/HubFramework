@@ -10,6 +10,8 @@
 		49FBB7241DBCEC59000B98CD /* CatsContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB7231DBCEC59000B98CD /* CatsContentOperation.swift */; };
 		49FBB7271DBCEC71000B98CD /* CatsContentOperationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB7261DBCEC71000B98CD /* CatsContentOperationFactory.swift */; };
 		49FBB72A1DBCF32F000B98CD /* CatRowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB7291DBCF32F000B98CD /* CatRowComponent.swift */; };
+		49FBB72E1DBD0335000B98CD /* CatAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB72D1DBD0335000B98CD /* CatAction.swift */; };
+		49FBB7301DBD0394000B98CD /* ActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB72F1DBD0394000B98CD /* ActionFactory.swift */; };
 		8A27299A1D9546BB00EF43FC /* RootContentOperationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2729991D9546BB00EF43FC /* RootContentOperationFactory.swift */; };
 		8A27299E1D9546ED00EF43FC /* RootContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27299D1D9546ED00EF43FC /* RootContentOperation.swift */; };
 		8A2729A21D95486A00EF43FC /* URL+ViewURIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2729A11D95486A00EF43FC /* URL+ViewURIs.swift */; };
@@ -68,6 +70,8 @@
 		49FBB7231DBCEC59000B98CD /* CatsContentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsContentOperation.swift; sourceTree = "<group>"; };
 		49FBB7261DBCEC71000B98CD /* CatsContentOperationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsContentOperationFactory.swift; sourceTree = "<group>"; };
 		49FBB7291DBCF32F000B98CD /* CatRowComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatRowComponent.swift; sourceTree = "<group>"; };
+		49FBB72D1DBD0335000B98CD /* CatAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatAction.swift; sourceTree = "<group>"; };
+		49FBB72F1DBD0394000B98CD /* ActionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionFactory.swift; sourceTree = "<group>"; };
 		8A2729991D9546BB00EF43FC /* RootContentOperationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContentOperationFactory.swift; sourceTree = "<group>"; };
 		8A27299D1D9546ED00EF43FC /* RootContentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContentOperation.swift; sourceTree = "<group>"; };
 		8A2729A11D95486A00EF43FC /* URL+ViewURIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+ViewURIs.swift"; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 			name = Cats;
 			sourceTree = "<group>";
 		};
+		49FBB72C1DBD0327000B98CD /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				49FBB72D1DBD0335000B98CD /* CatAction.swift */,
+				49FBB72F1DBD0394000B98CD /* ActionFactory.swift */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
 		8A42E0891D8C36A3004FAC33 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				8A42E0A91D8C376B004FAC33 /* AppDelegate.swift */,
+				49FBB72C1DBD0327000B98CD /* Actions */,
 				8AD5EDA81D997913004B2CEA /* Hub Manager Setup */,
 				8AD5EDAB1D997935004B2CEA /* Components */,
 				8AD5EDAC1D997AF3004B2CEA /* Features */,
@@ -370,6 +384,7 @@
 				8AD5EDBB1D9A7E5D004B2CEA /* DefaultComponentNames.swift in Sources */,
 				8AD72F571D9AC22600E4B427 /* ImageComponent.swift in Sources */,
 				8A2729A21D95486A00EF43FC /* URL+ViewURIs.swift in Sources */,
+				49FBB72E1DBD0335000B98CD /* CatAction.swift in Sources */,
 				8A42E1F91D8C476C004FAC33 /* ComponentFallbackHandler.swift in Sources */,
 				8ABCCEAC1D9D1AE4005113B5 /* ReallyLongListContentOperationFactory.swift in Sources */,
 				8AD5EDCE1D9AA294004B2CEA /* LabelComponent.swift in Sources */,
@@ -387,6 +402,7 @@
 				8AD72F551D9AC18100E4B427 /* PrettyPicturesContentOperationFactory.swift in Sources */,
 				8AD5EDC21D9A90F7004B2CEA /* GitHubSearchResultsContentOperation.swift in Sources */,
 				8AD14FED1D9958A90008E182 /* UIImageView+Animation.swift in Sources */,
+				49FBB7301DBD0394000B98CD /* ActionFactory.swift in Sources */,
 				8A42E1F71D8C468C004FAC33 /* ComponentLayoutManager.swift in Sources */,
 				8AD72F531D9ABDB100E4B427 /* PrettyPicturesContentOperation.swift in Sources */,
 			);

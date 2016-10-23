@@ -39,6 +39,8 @@ import HubFramework
         window.makeKeyAndVisible()
         
         registerDefaultComponentFactory()
+        registerActionFactory()
+
         registerAndOpenRootFeature()
         registerGitHubSearchFeature()
         registerPrettyPicturesFeature()
@@ -133,6 +135,12 @@ import HubFramework
             customJSONSchemaIdentifier: nil,
             actionHandler: nil,
             viewControllerScrollHandler: nil)
+    }
+
+    private func registerActionFactory() {
+        hubManager.actionRegistry.register(
+            ActionFactory(),
+            forNamespace: ActionFactory.namespace)
     }
     
     // MARK: - Opening view URIs
