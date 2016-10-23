@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		49FBB7241DBCEC59000B98CD /* CatsContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB7231DBCEC59000B98CD /* CatsContentOperation.swift */; };
 		49FBB7271DBCEC71000B98CD /* CatsContentOperationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB7261DBCEC71000B98CD /* CatsContentOperationFactory.swift */; };
+		49FBB72A1DBCF32F000B98CD /* CatRowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBB7291DBCF32F000B98CD /* CatRowComponent.swift */; };
 		8A27299A1D9546BB00EF43FC /* RootContentOperationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2729991D9546BB00EF43FC /* RootContentOperationFactory.swift */; };
 		8A27299E1D9546ED00EF43FC /* RootContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27299D1D9546ED00EF43FC /* RootContentOperation.swift */; };
 		8A2729A21D95486A00EF43FC /* URL+ViewURIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2729A11D95486A00EF43FC /* URL+ViewURIs.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		49FBB7231DBCEC59000B98CD /* CatsContentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsContentOperation.swift; sourceTree = "<group>"; };
 		49FBB7261DBCEC71000B98CD /* CatsContentOperationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsContentOperationFactory.swift; sourceTree = "<group>"; };
+		49FBB7291DBCF32F000B98CD /* CatRowComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatRowComponent.swift; sourceTree = "<group>"; };
 		8A2729991D9546BB00EF43FC /* RootContentOperationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContentOperationFactory.swift; sourceTree = "<group>"; };
 		8A27299D1D9546ED00EF43FC /* RootContentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContentOperation.swift; sourceTree = "<group>"; };
 		8A2729A11D95486A00EF43FC /* URL+ViewURIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+ViewURIs.swift"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				8AD72F561D9AC22600E4B427 /* ImageComponent.swift */,
 				8AD5EDB61D9A7D50004B2CEA /* SearchBarComponent.swift */,
 				8AD5EDC71D9A9C3C004B2CEA /* ActivityIndicatorComponent.swift */,
+				49FBB7291DBCF32F000B98CD /* CatRowComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			files = (
 				8A27299A1D9546BB00EF43FC /* RootContentOperationFactory.swift in Sources */,
 				8AD5EDB71D9A7D50004B2CEA /* SearchBarComponent.swift in Sources */,
+				49FBB72A1DBCF32F000B98CD /* CatRowComponent.swift in Sources */,
 				8AD5EDBF1D9A7ED0004B2CEA /* GitHubSearchBarContentOperation.swift in Sources */,
 				49FBB7271DBCEC71000B98CD /* CatsContentOperationFactory.swift in Sources */,
 				8AD5EDBB1D9A7E5D004B2CEA /* DefaultComponentNames.swift in Sources */,
