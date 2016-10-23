@@ -43,6 +43,7 @@ import HubFramework
         registerGitHubSearchFeature()
         registerPrettyPicturesFeature()
         registerReallyLongListFeature()
+        registerCatsFeature()
         
         return true
     }
@@ -120,6 +121,18 @@ import HubFramework
             actionHandler: nil,
             viewControllerScrollHandler: nil
         )
+    }
+
+    private func registerCatsFeature() {
+        hubManager.featureRegistry.registerFeature(
+            withIdentifier: "catsFeature",
+            viewURIPredicate: HUBViewURIPredicate(viewURI: .catsViewURI),
+            title: "Funny Cats",
+            contentOperationFactories: [CatsContentOperationFactory()],
+            contentReloadPolicy: nil,
+            customJSONSchemaIdentifier: nil,
+            actionHandler: nil,
+            viewControllerScrollHandler: nil)
     }
     
     // MARK: - Opening view URIs
