@@ -18,7 +18,7 @@ class ActionPlaygroundContentOperation: NSObject, HUBContentOperation {
         imageBuilder.customData = [ImageComponentCustomDataKeys.fullWidth: true]
 
         let row = viewModelBuilder.builderForBodyComponentModel(withIdentifier: "row")
-        row.componentName = DefaultComponentNames.row
+        row.componentName = DefaultComponentNames.label
         row.title = "Click me!"
 
         delegate?.contentOperationDidFinish(self)

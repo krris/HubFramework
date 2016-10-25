@@ -29,8 +29,9 @@ import HubFramework
  *
  *  - title
  */
-class LabelComponent: NSObject, HUBComponent {
+class LabelComponent: NSObject, HUBComponent, HUBComponentActionPerformer {
     var view: UIView?
+    var actionPerformer: HUBActionPerformer?
 
     private lazy var label = UILabel()
     private var font: UIFont { return .systemFont(ofSize: 20) }
@@ -43,6 +44,10 @@ class LabelComponent: NSObject, HUBComponent {
         label.numberOfLines = 0
         label.font = font
         view = label
+
+        view?.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapLabel))
+        view?.addGestureRecognizer(gestureRecognizer)
     }
 
     func preferredViewSize(forDisplaying model: HUBComponentModel, containerViewSize: CGSize) -> CGSize {
@@ -60,5 +65,10 @@ class LabelComponent: NSObject, HUBComponent {
 
     func configureView(with model: HUBComponentModel, containerViewSize: CGSize) {
         label.text = model.title
+    }
+
+    func didTapLabel(recognizer: UIGestureRecognizer) {
+        let identifier = HUBIdentifier(namespace: "hubDemo", name: "tap-label-action")
+        actionPerformer?.performAction(withIdentifier: identifier, customData: nil)
     }
 }
