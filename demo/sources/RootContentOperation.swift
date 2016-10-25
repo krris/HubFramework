@@ -52,6 +52,11 @@ class RootContentOperation: NSObject, HUBContentOperation {
         todoListRowBuilder.title = "Todo list"
         todoListRowBuilder.subtitle = "A feature for adding todo items to a list"
         todoListRowBuilder.targetBuilder.uri = .todoListViewURI
+
+        let actionPlaygroundRowBuilder = viewModelBuilder.builderForBodyComponentModel(withIdentifier: "actionPlayground")
+        actionPlaygroundRowBuilder.title = "Action Playground"
+        actionPlaygroundRowBuilder.subtitle = "A playground for actions"
+        actionPlaygroundRowBuilder.targetBuilder.uri = .acitonPlaygroundViewURI
         
         delegate?.contentOperationDidFinish(self)
     }

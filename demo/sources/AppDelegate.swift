@@ -44,6 +44,7 @@ import HubFramework
         registerPrettyPicturesFeature()
         registerReallyLongListFeature()
         registerTodoListFeature()
+        registerActionPlaygroundFeature()
         
         return true
     }
@@ -140,6 +141,23 @@ import HubFramework
         )
         
         hubManager.actionRegistry.register(TodoListActionFactory(), forNamespace: TodoListActionFactory.namespace)
+    }
+
+    private func registerActionPlaygroundFeature() {
+        let contentOperationFactory = HUBBlockContentOperationFactory() { _ in
+            return [ActionPlaygroundContentOperation()]
+        }
+
+        hubManager.featureRegistry.registerFeature(
+            withIdentifier: "actionPlayground",
+            viewURIPredicate: HUBViewURIPredicate(viewURI: .acitonPlaygroundViewURI),
+            title: "Action Playground",
+            contentOperationFactories: [contentOperationFactory],
+            contentReloadPolicy: nil,
+            customJSONSchemaIdentifier: nil,
+            actionHandler: nil,
+            viewControllerScrollHandler: nil
+        )
     }
     
     // MARK: - Opening view URIs

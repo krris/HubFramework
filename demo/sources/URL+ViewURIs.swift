@@ -46,6 +46,11 @@ extension URL {
     static var todoListViewURI: URL {
         return URL(viewURI: "todoList")
     }
+    
+    /// The view URI used for the "Action Playground" feature
+    static var acitonPlaygroundViewURI: URL {
+        return URL(viewURI: "actionPlayground")
+    }
 }
 
 private extension URL {
