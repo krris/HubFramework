@@ -33,6 +33,7 @@
 #import "HUBViewModelImplementation.h"
 #import "HUBContentOperationWrapper.h"
 #import "HUBUtilities.h"
+#import "HUBComponentActionObserver.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -123,6 +124,10 @@ NS_ASSUME_NONNULL_BEGIN
                                                                              viewURI:self.viewURI
                                                                          featureInfo:self.featureInfo
                                                                    connectivityState:self.connectivityState];
+
+        if ([operation conformsToProtocol:@protocol(HUBComponentActionObserver)]) {
+
+        }
     }
 }
 

@@ -35,7 +35,7 @@ class LabelComponent: NSObject, HUBComponent, HUBComponentActionPerformer {
 
     private lazy var label = UILabel()
     private var font: UIFont { return .systemFont(ofSize: 20) }
-    
+
     var layoutTraits: Set<HUBComponentLayoutTrait> {
         return [.compactWidth]
     }
