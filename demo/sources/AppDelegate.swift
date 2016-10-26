@@ -158,6 +158,8 @@ import HubFramework
             actionHandler: nil,
             viewControllerScrollHandler: nil
         )
+
+        hubManager.actionRegistry.register(ActionPlaygroundActionFactory(), forNamespace: ActionPlaygroundActionFactory.namespace)
     }
     
     // MARK: - Opening view URIs

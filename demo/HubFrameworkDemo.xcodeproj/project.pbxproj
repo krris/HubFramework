@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D925D171DBF9B94000ED646 /* ActionPlaygroundContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D925D161DBF9B94000ED646 /* ActionPlaygroundContentOperation.swift */; };
+		1D98E5C21DC0DDFC00607097 /* ActionPlaygroundPingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98E5C11DC0DDFC00607097 /* ActionPlaygroundPingAction.swift */; };
+		1D98E5C51DC0DE1C00607097 /* ActionPlaygroundActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98E5C41DC0DE1C00607097 /* ActionPlaygroundActionFactory.swift */; };
 		8A27299A1D9546BB00EF43FC /* RootContentOperationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2729991D9546BB00EF43FC /* RootContentOperationFactory.swift */; };
 		8A27299E1D9546ED00EF43FC /* RootContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27299D1D9546ED00EF43FC /* RootContentOperation.swift */; };
 		8A2729A21D95486A00EF43FC /* URL+ViewURIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2729A11D95486A00EF43FC /* URL+ViewURIs.swift */; };
@@ -68,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		1D925D161DBF9B94000ED646 /* ActionPlaygroundContentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlaygroundContentOperation.swift; sourceTree = "<group>"; };
+		1D98E5C11DC0DDFC00607097 /* ActionPlaygroundPingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlaygroundPingAction.swift; sourceTree = "<group>"; };
+		1D98E5C41DC0DE1C00607097 /* ActionPlaygroundActionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlaygroundActionFactory.swift; sourceTree = "<group>"; };
 		8A2729991D9546BB00EF43FC /* RootContentOperationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContentOperationFactory.swift; sourceTree = "<group>"; };
 		8A27299D1D9546ED00EF43FC /* RootContentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContentOperation.swift; sourceTree = "<group>"; };
 		8A2729A11D95486A00EF43FC /* URL+ViewURIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+ViewURIs.swift"; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				1D925D161DBF9B94000ED646 /* ActionPlaygroundContentOperation.swift */,
+				1D98E5C11DC0DDFC00607097 /* ActionPlaygroundPingAction.swift */,
+				1D98E5C41DC0DE1C00607097 /* ActionPlaygroundActionFactory.swift */,
 			);
 			name = "Action Playground";
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				8A2729A21D95486A00EF43FC /* URL+ViewURIs.swift in Sources */,
 				8A42E1F91D8C476C004FAC33 /* ComponentFallbackHandler.swift in Sources */,
 				8AB850961DBF9DE300AFAFD0 /* CarouselComponent.swift in Sources */,
+				1D98E5C51DC0DE1C00607097 /* ActionPlaygroundActionFactory.swift in Sources */,
 				8A374D001DBE659E0013E592 /* TodoListAddAction.swift in Sources */,
 				8ABCCEAC1D9D1AE4005113B5 /* ReallyLongListContentOperationFactory.swift in Sources */,
 				8AD5EDCE1D9AA294004B2CEA /* LabelComponent.swift in Sources */,
@@ -404,6 +411,7 @@
 				8A374D011DBE659E0013E592 /* TodoListContentOperation.swift in Sources */,
 				8AD14FED1D9958A90008E182 /* UIImageView+Animation.swift in Sources */,
 				8A42E1F71D8C468C004FAC33 /* ComponentLayoutManager.swift in Sources */,
+				1D98E5C21DC0DDFC00607097 /* ActionPlaygroundPingAction.swift in Sources */,
 				8AD72F531D9ABDB100E4B427 /* PrettyPicturesContentOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

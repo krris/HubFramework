@@ -68,7 +68,7 @@ class LabelComponent: NSObject, HUBComponent, HUBComponentActionPerformer {
     }
 
     func didTapLabel(recognizer: UIGestureRecognizer) {
-        let identifier = HUBIdentifier(namespace: "hubDemo", name: "tap-label-action")
+        let identifier = HUBIdentifier(namespace: ActionPlaygroundActionFactory.namespace, name: ActionPlaygroundActionNames.ping)
         actionPerformer?.performAction(withIdentifier: identifier, customData: nil)
     }
 }
