@@ -1230,7 +1230,7 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState
 
     for (HUBComponentWrapper *componentWrapper in self.actionObservingComponentWrappers) {
         id<HUBComponentActionObserver> observer = componentWrapper;
-        [observer actionPerformedWithContext:context viewURI:self.viewURI];
+        [observer actionPerformedWithContext:context];
     }
 
     return [self.actionHandler handleActionWithContext:context];

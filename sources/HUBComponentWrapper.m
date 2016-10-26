@@ -291,13 +291,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - HUBComponentActionObserver
 
-- (void)actionPerformedWithContext:(id<HUBActionContext>)context viewURI:(NSURL *)viewURI
+- (void)actionPerformedWithContext:(id<HUBActionContext>)context
 {
     if (![self.component conformsToProtocol:@protocol(HUBComponentActionObserver)]) {
         return;
     }
     
-    [(id<HUBComponentActionObserver>)self.component actionPerformedWithContext:context viewURI:viewURI];
+    [(id<HUBComponentActionObserver>)self.component actionPerformedWithContext:context];
 }
 
 #pragma mark - HUBComponentWithSelectionState
