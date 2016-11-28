@@ -2038,6 +2038,22 @@
     XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)3);
 }
 
+- (void)testComponentNotifiedOfContentOffsetChangeOnFirstAppearanceWithContentOffsetSetBefore
+{
+    self.component.isContentOffsetObserver = YES;
+
+    self.contentOperation.contentLoadingBlock = ^(id<HUBViewModelBuilder> viewModelBuilder) {
+        viewModelBuilder.headerComponentModelBuilder.title = @"Header";
+        return YES;
+    };
+
+    // View controller has initialized contentOffset before displaying a view
+    [self.viewController scrollToContentOffset:CGPointMake(0, 0) animated:NO];
+    [self simulateViewControllerLayoutCycle];
+
+    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)1);
+}
+
 - (void)testHeaderComponentNotifiedOfContentOffsetChange
 {
     self.component.isContentOffsetObserver = YES;
