@@ -97,6 +97,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL viewModelHasChangedSinceLastLayoutUpdate;
 @property (nonatomic) CGFloat visibleKeyboardHeight;
 @property (nonatomic, strong, nullable) NSValue *lastContentOffset;
+@property (nonatomic, assign) BOOL wasContentOffsetNotifiedOnFirstAppearance;
 @property (nonatomic, copy, nullable) void(^pendingScrollAnimationCallback)(void);
 
 @end
@@ -1200,9 +1201,12 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState
     [componentWrapper viewWillAppear];
 
     BOOL wasContentOffsetUpdated = self.lastContentOffset == nil ||
+                                   self.wasContentOffsetNotifiedOnFirstAppearance == NO ||
                                    !CGPointEqualToPoint([self.lastContentOffset CGPointValue], self.collectionView.contentOffset);
 
     if (componentWrapper.isContentOffsetObserver && wasContentOffsetUpdated) {
+        self.wasContentOffsetNotifiedOnFirstAppearance = YES;
+
         [componentWrapper updateViewForChangedContentOffset:self.collectionView.contentOffset];
     }
 }
