@@ -884,6 +884,8 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState
 
     HUBContainerView *containerView = (HUBContainerView *)self.view;
     containerView.collectionView = self.collectionView;
+    
+    self.lastContentOffset = [NSValue valueWithCGPoint:self.collectionView.contentOffset];
 }
 
 - (void)reloadCollectionViewWithViewModel:(id<HUBViewModel>)viewModel animated:(BOOL)animated
@@ -1193,6 +1195,7 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState
     [componentWrapper viewWillAppear];
 
     BOOL wasContentOffsetUpdated = self.lastContentOffset == nil ||
+                                    [componentWrapper.viewHasAppearedForTheFirstTime boolValue] == YES ||
                                    !CGPointEqualToPoint([self.lastContentOffset CGPointValue], self.collectionView.contentOffset);
 
     if (componentWrapper.isContentOffsetObserver && wasContentOffsetUpdated) {

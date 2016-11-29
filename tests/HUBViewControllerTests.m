@@ -2075,20 +2075,20 @@
     self.collectionView.cells[indexPath] = cell;
     self.collectionView.mockedIndexPathsForVisibleItems = @[indexPath];
     [self.viewController viewWillAppear:NO];
-    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)2);
+    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)1);
     
     const CGPoint expectedContentOffset = CGPointMake(99, 77);
     [self.viewController scrollToContentOffset:expectedContentOffset animated:NO];
-    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)3);
+    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)2);
 
     // Component shouldn't be notified because content offset hasn't changed
     [self.viewController viewWillAppear:NO];
-    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)3);
+    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)2);
 
     // Component isn't notified if view is reloaded
     self.contentReloadPolicy.shouldReload = YES;
     [self.viewController viewWillAppear:NO];
-    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)3);
+    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)2);
 }
 
 - (void)testHeaderComponentNotifiedOfContentOffsetChange
@@ -2105,6 +2105,25 @@
     
     [self.viewController scrollToContentOffset:CGPointMake(0, 100) animated:NO];
     XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)2);
+
+    [self.viewController reload];
+    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)2);
+}
+
+- (void)testComponentNotifiedOfContentOffsetChangeOnFirstAppearanceWithContentOffsetSetBefore
+{
+    self.component.isContentOffsetObserver = YES;
+
+    self.contentOperation.contentLoadingBlock = ^(id<HUBViewModelBuilder> viewModelBuilder) {
+        viewModelBuilder.headerComponentModelBuilder.title = @"Header";
+        return YES;
+    };
+
+    // View controller has initialized contentOffset before displaying a view
+    [self.viewController scrollToContentOffset:CGPointMake(0, 0) animated:NO];
+    [self simulateViewControllerLayoutCycle];
+
+    XCTAssertEqual(self.component.numberOfContentOffsetChanges, (NSUInteger)1);
 }
 
 - (void)testOverlayComponentNotifiedOfContentOffsetChange
