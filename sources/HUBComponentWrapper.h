@@ -168,7 +168,7 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState;
 @property (nonatomic, readonly) BOOL viewHasAppearedSinceLastModelChange;
 
 /// Whether the wrapped component's view has appeared for the first time
-@property (nonatomic, assign, nullable, readonly) NSNumber *viewHasAppearedForTheFirstTime;
+@property (nonatomic, assign, readonly) BOOL viewHasAppeared;
 
 /// Returns an array of all direct child component wrappers that are currently being displayed.
 @property (nonatomic, readonly) NSArray<HUBComponentWrapper *> *visibleChildren;

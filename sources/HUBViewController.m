@@ -1194,7 +1194,7 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState
 {
     [componentWrapper viewWillAppear];
 
-    BOOL wasContentOffsetUpdated = [componentWrapper.viewHasAppearedForTheFirstTime boolValue] == YES ||
+    BOOL wasContentOffsetUpdated = componentWrapper.viewHasAppeared == YES ||
                                    !CGPointEqualToPoint(self.lastContentOffset, self.collectionView.contentOffset);
 
     if (componentWrapper.isContentOffsetObserver && wasContentOffsetUpdated) {

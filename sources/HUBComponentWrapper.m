@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) HUBComponentGestureRecognizer *gestureRecognizer;
 @property (nonatomic, assign) BOOL hasBeenConfigured;
 @property (nonatomic, assign) BOOL shouldPerformDelayedHighlight;
-@property (nonatomic, assign, nullable) NSNumber *viewHasAppearedForTheFirstTime;
+@property (nonatomic, assign) BOOL viewHasAppeared;
 @property (nonatomic, assign) HUBComponentSelectionState selectionState;
 
 @end
@@ -556,10 +556,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)configureViewHasAppearedForTheFirstTime
 {
-    if ([self.viewHasAppearedForTheFirstTime boolValue] == YES) {
-        self.viewHasAppearedForTheFirstTime = @(NO);
-    } else if (self.viewHasAppearedForTheFirstTime == nil) {
-        self.viewHasAppearedForTheFirstTime = @(YES);
+//    if ([self.viewHasAppearedForTheFirstTime boolValue] == YES) {
+//        self.viewHasAppearedForTheFirstTime = @(NO);
+//    } else if (self.viewHasAppearedForTheFirstTime == nil) {
+//        self.viewHasAppearedForTheFirstTime = @(YES);
+//    }
+    if (self.viewHasAppeared == YES) {
+        self.viewHasAppeared = NO;
+    } else if (self.viewHasAppeared == NO) {
+        self.viewHasAppeared= YES;
     }
 }
 
