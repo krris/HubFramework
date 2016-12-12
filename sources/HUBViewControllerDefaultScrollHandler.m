@@ -47,6 +47,12 @@ NS_ASSUME_NONNULL_BEGIN
     return proposedContentInsets;
 }
 
+- (UIEdgeInsets)contentInsetsForOverlayComponent:(NSObject *)overlayCoponent
+                           proposedContentInsets:(UIEdgeInsets)proposedContentInsets
+{
+    return proposedContentInsets;
+}
+
 - (void)scrollingWillStartInViewController:(HUBViewController *)viewController
                         currentContentRect:(CGRect)currentContentRect
 {

@@ -78,6 +78,12 @@
 - (UIEdgeInsets)contentInsetsForViewController:(HUBViewController *)viewController
                          proposedContentInsets:(UIEdgeInsets)proposedContentInsets;
 
+// contentoffsetinsetsForOverlay
+
+- (UIEdgeInsets)contentInsetsForOverlayComponent:(NSObject *)overlayCoponent
+                           proposedContentInsets:(UIEdgeInsets)proposedContentInsets;
+
+
 /**
  *  React to that a scrolling event started in a view controller
  *

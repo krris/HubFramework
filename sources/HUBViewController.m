@@ -1050,7 +1050,7 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState
 {
     CGRect frame = self.view.bounds;
     frame.origin.y = self.collectionView.contentInset.top;
-    frame.size.height -= self.visibleKeyboardHeight + CGRectGetMinY(frame);
+//    frame.size.height -= self.visibleKeyboardHeight + CGRectGetMinY(frame);
     return CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
 }
 
