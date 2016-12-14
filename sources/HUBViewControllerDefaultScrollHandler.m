@@ -47,9 +47,10 @@ NS_ASSUME_NONNULL_BEGIN
     return proposedContentInsets;
 }
 
-- (UIEdgeInsets)contentInsetsForOverlayComponent:(NSObject *)overlayCoponent
-                           proposedContentInsets:(UIEdgeInsets)proposedContentInsets
+- (UIEdgeInsets)contentInsetsForOverlayInViewContrller:(HUBViewController *)viewController
+                    componentWithProposedContentInsets:(UIEdgeInsets)proposedContentInsets
 {
+    // TODO kwerys
     return proposedContentInsets;
 }
 
