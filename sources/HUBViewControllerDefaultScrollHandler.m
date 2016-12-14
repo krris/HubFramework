@@ -47,11 +47,10 @@ NS_ASSUME_NONNULL_BEGIN
     return proposedContentInsets;
 }
 
-- (UIEdgeInsets)contentInsetsForOverlayInViewContrller:(HUBViewController *)viewController
-                    componentWithProposedContentInsets:(UIEdgeInsets)proposedContentInsets
+- (CGPoint)centerPointForOverlayComponentInViewController:(HUBViewController *)viewController
+                                      proposedCenterPoint:(CGPoint)proposedCenterPoint
 {
-    // TODO kwerys
-    return proposedContentInsets;
+    return proposedCenterPoint;
 }
 
 - (void)scrollingWillStartInViewController:(HUBViewController *)viewController

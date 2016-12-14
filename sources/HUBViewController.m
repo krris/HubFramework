@@ -1049,16 +1049,12 @@ willUpdateSelectionState:(HUBComponentSelectionState)selectionState
 - (CGPoint)overlayComponentCenterPoint
 {
     CGRect frame = self.view.bounds;
-//    frame.origin.y = self.collectionView.contentInset.top;
-//    frame.size.height -= self.visibleKeyboardHeight + CGRectGetMinY(frame);
+    frame.origin.y = self.collectionView.contentInset.top;
+    frame.size.height -= self.visibleKeyboardHeight + CGRectGetMinY(frame);
 
-    UIEdgeInsets proposedEdgeInsets = UIEdgeInsetsMake(self.collectionView.contentInset.top, 0, self.visibleKeyboardHeight, 0);
-//    UIEdgeInsets proposedEdgeInsets = UIEdgeInsetsMake(self.collectionView.contentInset.top, 0, 0, 0);
-
-    UIEdgeInsets calculetedEdgeInsets = [self.scrollHandler contentInsetsForOverlayInViewContrller:self
-                                                                componentWithProposedContentInsets:proposedEdgeInsets];
-    frame = UIEdgeInsetsInsetRect(frame, calculetedEdgeInsets);
-    return CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
+    CGPoint proposedCenterPoint = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
+    return [self.scrollHandler centerPointForOverlayComponentInViewController:self
+                                                          proposedCenterPoint:proposedCenterPoint];
 }
 
 - (void)updateOverlayComponentCenterPointsWithKeyboardNotification:(NSNotification *)notification

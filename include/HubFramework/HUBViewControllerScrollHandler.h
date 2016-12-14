@@ -79,8 +79,8 @@
                          proposedContentInsets:(UIEdgeInsets)proposedContentInsets;
 
 
-- (UIEdgeInsets)contentInsetsForOverlayInViewContrller:(HUBViewController *)viewController
-                    componentWithProposedContentInsets:(UIEdgeInsets)proposedContentInsets;
+- (CGPoint)centerPointForOverlayComponentInViewController:(HUBViewController *)viewController
+                                      proposedCenterPoint:(CGPoint)proposedCenterPoint;
 
 
 /**
