@@ -109,8 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                                                                                                actionRegistry:actionRegistry
                                                                                                                                          defaultActionHandler:defaultActionHandler
                                                                                                                                        componentLayoutManager:componentLayoutManager
-                                                                                                                                           imageLoaderFactory:imageLoaderFactoryToUse
-                                                                                                                                                  application:application];
+                                                                                                                                           imageLoaderFactory:imageLoaderFactoryToUse];
         
         _featureRegistry = featureRegistry;
         _componentRegistry = componentRegistry;
